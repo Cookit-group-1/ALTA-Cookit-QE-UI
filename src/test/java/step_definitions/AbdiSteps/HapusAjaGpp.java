@@ -1,5 +1,5 @@
 package step_definitions.AbdiSteps;
 
-public class ContohClass {
+public class HapusAjaGpp {
 
 }
