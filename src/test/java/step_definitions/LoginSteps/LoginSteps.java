@@ -48,8 +48,9 @@ public class LoginSteps {
     }
 
     @And("^User already login$")
-    public void userAlreadyLogin() {
+    public void userAlreadyLogin() throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         Assert.assertTrue(loginPage.verifyDashboard());
+        Thread.sleep(2000);
     }
 }
