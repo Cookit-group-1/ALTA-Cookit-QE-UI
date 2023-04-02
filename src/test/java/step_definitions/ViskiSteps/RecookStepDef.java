@@ -12,7 +12,7 @@ public class RecookStepDef {
     private static WebDriver webDriver;
     public RecookStepDef(){
         super();
-        WebDriver = Hooks.webDriver;
+        webDriver = Hooks.webDriver;
     }
     @When("^User Click Tab Recipe$")
     public void userClickTabRecipe() throws InterruptedException {
