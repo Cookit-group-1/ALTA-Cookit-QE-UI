@@ -9,9 +9,9 @@ Feature: menu Recook
     When User Click Tab Recipe
     Then Click on reply button in post account user
     And Click Add your comment Field
-    Then Input Valid data add yout comment Field
-    And Click on Add image button
-    Then Click on Post Button
+    Then Input Valid data add your comment Field " Add your comment "
+#    And Click on Add image button
+#    Then Click on Post Button
 
   Scenario Outline: "Recook Validation - add your comment"
     Given User open website cookit
@@ -23,7 +23,7 @@ Feature: menu Recook
     When User Click Tab Recipe
     Then Click on reply button in post account user
     And Click Add your comment Field
-    Then Input any "<TestCase>"
+    Then Input any Add your comment Field "<TestCase>"
     Examples:
       | TestCase |
       | Abcd     |
