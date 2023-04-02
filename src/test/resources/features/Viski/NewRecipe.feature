@@ -9,43 +9,43 @@ Feature: menu new Recipe
     When User Click Button Add new Item
     Then Click on New Recipe
     And Click on Recipe Title Field
-    Then Input Valid Data Recipe Title Field
+    Then Input Valid Data Recipe Title Field "Kue Bolu Kukus"
     And Click on Description Field
-    Then Input Valid Data Recipe Title Field
-    And Click on Photo Field
-    And Choose one Photo
-    And Click Open
-    And Click on Ingredients sub button 1 Field
-    Then Input Valid Data Ingredients sub button 1 Field
-    And Click on Amt sub button 1 Field
-    Then Input Valid Data Amt sub button 1 Field
-    And Click on Units sub button 1 Field
-    Then Input Valid Data Unit sub button 1 Field
+    Then Input Valid Data Description Field "Kue Favorit di pasar"
+#    And Click on Photo Field
+#    And Choose one Photo
+#    And Click Open
+    And Click on Ingredients sub button First Field
+    Then Input Valid Data Ingredients sub button First Field "Tepung"
+    And Click on Amt sub button First Field
+    Then Input Valid Data Amt sub button First Field = 1
+    And Click on Units sub button First Field
+    Then Input Valid Data Unit sub button First Field "gram"
     And Click on Ingredients add button
-    And Click on Ingredients sub button 2 Field
-    Then Input Valid Data Ingredients sub button 2 Field
-    And Click on Amt sub button 2 Field
-    Then Input Valid Data Amt sub button 2 Field
-    And Click on Units sub button 2 Field
-    Then Input Valid Data Unit sub button 2 Field
+    And Click on Ingredients sub button Second Field
+    Then Input Valid Data Ingredients sub button Second Field "Gula"
+    And Click on Amt sub button Second Field
+    Then Input Valid Data Amt sub button Second Field = 2
+    And Click on Units sub button Second Field
+    Then Input Valid Data Unit sub button Second Field "kilogram"
     And Click on Ingredients add button
-    And Click on Ingredients sub button 3 Field
-    Then Input Valid Data Ingredients sub button 3 Field
-    And Click on Amt sub button 3 Field
-    Then Input Valid Data Amt sub button 3 Field
-    And Click on Units sub button 3 Field
-    Then Input Valid Data Unit sub button 3 Field
+    And Click on Ingredients sub button Third Field
+    Then Input Valid Data Ingredients sub button Third Field "Butter"
+    And Click on Amt sub button Third Field
+    Then Input Valid Data Amt sub button Third Field = 3
+    And Click on Units sub button Third Field
+    Then Input Valid Data Unit sub button Third Field "gram"
     And Click on Directions add button
-    And Click on Directions 1 Field
-    Then Input Valid Data Directions 1 Field
+    And Click on Directions First Field
+    Then Input Valid Data Directions First Field "Preheat oven to 350 degrees Farenheit..."
     And Click on Directions add button
-    And Click on Directions 2 Field
-    Then Input Valid Data Directions 2 Field
+    And Click on Directions Second Field
+    Then Input Valid Data Directions Second Field "Combine all dry ingredients into a large bowl..."
     And Click on Directions add button
-    And Click on Directions 3 Field
-    Then Input Valid Data Directions 3 Field
+    And Click on Directions Third Field
+    Then Input Valid Data Directions Third Field "Pour into greased trays and bake for 15-20 minutes..."
     And Click on Sell Ingredients Field
-    Then Input Valid Data Sell Ingredients Field
+    Then Input Valid Data Sell Ingredients Field "Rp.50.000"
     And Click on Submit Recipe
 
   Scenario Outline: "New Recipe Validation - Recipe Title"
@@ -58,7 +58,7 @@ Feature: menu new Recipe
     When User Click Button Add new Item
     Then Click on New Recipe
     And Click on Recipe Title Field
-    Then Input any "<TestCase>"
+    Then Input any Recipe Title Field "<TestCase>"
     Examples:
       | TestCase |
       | Abcd     |
@@ -75,7 +75,7 @@ Feature: menu new Recipe
     When User Click Button Add new Item
     Then Click on New Recipe
     And Click on Description Field
-    Then Input any "<TestCase>"
+    Then Input any Description Field "<TestCase>"
     Examples:
       | TestCase |
       | Abcd     |
@@ -91,8 +91,8 @@ Feature: menu new Recipe
     And User already login
     When User Click Button Add new Item
     Then Click on New Recipe
-    And Click on Ingredients sub button 1 Field
-    Then Input any "<TestCase>"
+    And Click on Ingredients sub button First Field
+    Then Input any Ingredients sub button First Field "<TestCase>"
     Examples:
       | TestCase |
       | Abcd     |
@@ -108,8 +108,8 @@ Feature: menu new Recipe
     And User already login
     When User Click Button Add new Item
     Then Click on New Recipe
-    And Click on Amt sub button 1 Field
-    Then Input any "<TestCase>"
+    And Click on Amt sub button First Field
+    Then Input any Amt sub button First Field "<TestCase>"
     Examples:
       | TestCase |
       | Abcd     |
@@ -125,8 +125,8 @@ Feature: menu new Recipe
     And User already login
     When User Click Button Add new Item
     Then Click on New Recipe
-    And Click on Units sub button 1 Field
-    Then Input any "<TestCase>"
+    And Click on Units sub button First Field
+    Then Input any Units sub button First Field "<TestCase>"
     Examples:
       | TestCase |
       | Abcd     |
@@ -142,8 +142,8 @@ Feature: menu new Recipe
     And User already login
     When User Click Button Add new Item
     Then Click on New Recipe
-    And Click on Directions 1 Field
-    Then Input any "<TestCase>"
+    And Click on Directions First Field
+    Then Input any Directions First Field "<TestCase>"
     Examples:
       | TestCase |
       | Abcd     |
@@ -160,7 +160,7 @@ Feature: menu new Recipe
     When User Click Button Add new Item
     Then Click on New Recipe
     And Click on Sell Ingredients Field
-    Then Input any "<TestCase>"
+    Then Input any Sell Ingredients Field "<TestCase>"
     Examples:
       | TestCase |
       | Abcd     |
@@ -176,7 +176,7 @@ Feature: menu new Recipe
     And User already login
     When User Click Button Add new Item
     Then Click on New Recipe
-    And Click on Photo Field
+#    And Click on Photo Field
 
   Scenario: "New Recipe Functionality  - Ingredients add button"
     Given User open website cookit

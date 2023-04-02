@@ -18,4 +18,34 @@ public class CartPage {
         ClickButtonCart.click();
     }
 
+    @FindBy(xpath = "")
+    private WebElement ChecklistItem;
+    public void ChecklistItem(){
+        ChecklistItem.click();
+    }
+
+    @FindBy(xpath = "")
+    private WebElement DeleteItemButton;
+    public void DeleteItemButton(){
+        DeleteItemButton.click();
+    }
+
+    @FindBy(xpath = "")
+    private WebElement PositiveButton;
+    public void PositiveButton(){
+        PositiveButton.click();
+    }
+
+    @FindBy(xpath = "")
+    private WebElement NegativeButton;
+    public void NegativeButton(){
+        NegativeButton.click();
+    }
+
+    @FindBy(xpath = "")
+    private WebElement CheckOut;
+    public void CheckOut(){
+        CheckOut.click();
+    }
+
 }

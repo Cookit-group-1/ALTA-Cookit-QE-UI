@@ -21,29 +21,40 @@ public class CartStepDef {
         Thread.sleep(3000);
     }
 
-    @Then("^Page Display where item price is same with item total$")
-    public void PageDisplaywhereitempriceissamewithitemtotal() {
-    }
-
     @Then("^Click on Checklist Item$")
-    public void clickOnChecklistItem() {
+    public void clickOnChecklistItem() throws InterruptedException {
+        CartPage cartPage = new CartPage(webDriver);
+        cartPage.ChecklistItem();
+        Thread.sleep(3000);
     }
 
     @Then("^Click on Delete Item button$")
-    public void clickOnDeleteItemButton() {
+    public void clickOnDeleteItemButton() throws InterruptedException {
+        CartPage cartPage = new CartPage(webDriver);
+        cartPage.ChecklistItem();
+        Thread.sleep(3000);
     }
 
 
     @Then("^Click on positive button$")
-    public void clickOnPositiveButton() {
+    public void clickOnPositiveButton() throws InterruptedException {
+        CartPage cartPage = new CartPage(webDriver);
+        cartPage.PositiveButton();
+        Thread.sleep(3000);
     }
 
     @And("^Click on negative button$")
-    public void clickOnNegativeButton() {
+    public void clickOnNegativeButton() throws InterruptedException {
+        CartPage cartPage = new CartPage(webDriver);
+        cartPage.NegativeButton();
+        Thread.sleep(3000);
     }
 
     @Then("^Click on Check out$")
-    public void clickOnCheckOut() {
+    public void clickOnCheckOut() throws InterruptedException {
+        CartPage cartPage = new CartPage(webDriver);
+        cartPage.CheckOut();
+        Thread.sleep(3000);
     }
 
 }
