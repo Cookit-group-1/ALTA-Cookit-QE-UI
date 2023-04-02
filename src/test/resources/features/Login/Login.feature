@@ -1,4 +1,4 @@
-@Test
+@Login
 Feature: login
   Scenario: login with valid data
     Given User open website cookit
