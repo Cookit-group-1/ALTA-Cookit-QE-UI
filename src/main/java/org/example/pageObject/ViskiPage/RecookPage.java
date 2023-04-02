@@ -35,4 +35,11 @@ public class RecookPage {
     public void inputValidDataAddYourCommentField(String DataAddYourCommentField) {
         inputValidDataAddYourCommentField.sendKeys(DataAddYourCommentField);
     }
+
+    @FindBy(xpath = "")
+    private WebElement inputAnyAddYourCommentField;
+    public void inputAnyAddYourCommentField(String AnyAddYourCommentField) {
+        inputAnyAddYourCommentField.sendKeys(AnyAddYourCommentField);
+    }
+
 }

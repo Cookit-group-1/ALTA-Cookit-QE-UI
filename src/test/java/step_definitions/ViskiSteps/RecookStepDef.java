@@ -40,7 +40,6 @@ public class RecookStepDef {
         RecookPage recookPage = new RecookPage(webDriver);
         recookPage.inputValidDataAddYourCommentField(DataAddYourCommentField);
         Thread.sleep(3000);
-
     }
 
     @And("^Click on Add image button$")
@@ -52,4 +51,10 @@ public class RecookStepDef {
     }
 
 
+    @Then("^Input any Add your comment Field \"([^\"]*)\"$")
+    public void inputAnyAddYourCommentField(String AddYourCommentField) throws InterruptedException {
+        RecookPage recookPage = new RecookPage(webDriver);
+        recookPage.inputAnyAddYourCommentField(AddYourCommentField);
+        Thread.sleep(3000);
+    }
 }
