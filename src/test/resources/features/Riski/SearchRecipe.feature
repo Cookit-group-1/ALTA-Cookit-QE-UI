@@ -45,7 +45,7 @@
         Then User can input alphabet "coba"
 
       @Test5
-    Scenario: Search recipe with alphabet
+    Scenario Outline: Search recipe with alphabet
         Given User open website cookit
         When Click sign in button
         And Input username "RiskiFdfsadfaserdian49"
@@ -54,8 +54,15 @@
         And User already login
         When User click search button
         And User click search page
-        And User can input alphabet "Noodle"
+        And User can input alphabet "<search>"
         And User click search recipe
-        Then System show any recipe "Noodle"
+        Then System show any recipe "<result>"
+    Examples:
+      | search | result       |
+      | Noodle | Noodle       |
+      |        | input recipe |
+      | ./?@   | not found    |
+
+
 
 
