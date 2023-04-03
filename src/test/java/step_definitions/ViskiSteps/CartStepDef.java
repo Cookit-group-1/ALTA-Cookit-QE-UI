@@ -21,17 +21,10 @@ public class CartStepDef {
         Thread.sleep(3000);
     }
 
-    @Then("^Click on Checklist Item$")
-    public void clickOnChecklistItem() throws InterruptedException {
-        CartPage cartPage = new CartPage(webDriver);
-        cartPage.ChecklistItem();
-        Thread.sleep(3000);
-    }
-
     @Then("^Click on Delete Item button$")
     public void clickOnDeleteItemButton() throws InterruptedException {
         CartPage cartPage = new CartPage(webDriver);
-        cartPage.ChecklistItem();
+        cartPage.DeleteItemButton();
         Thread.sleep(3000);
     }
 
