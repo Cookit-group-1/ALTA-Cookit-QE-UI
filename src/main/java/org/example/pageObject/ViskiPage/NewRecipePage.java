@@ -66,13 +66,19 @@ public class NewRecipePage {
     @FindBy(xpath = "//input[@value='0']")
     private WebElement AmtSubButtonFirstField;
     public void AmtSubButtonFirstField() {
-     AmtSubButtonFirstField.click();
+        AmtSubButtonFirstField.click();
+    }
+
+    @FindBy(xpath = "//input[@value='0']")
+    private WebElement inputValidDataAmtSubButtonFirstFieldClear;
+    public void inputValidDataAmtSubButtonFirstFieldClear() {
+        inputValidDataAmtSubButtonFirstFieldClear.clear();
     }
 
      @FindBy(xpath = "//input[@value='0']")
      private WebElement inputValidDataAmtSubButtonFirstField;
      public void inputValidDataAmtSubButtonFirstField(int Amt) {
-        inputValidDataAmtSubButtonFirstField.sendKeys(String.valueOf(Amt));
+         inputValidDataAmtSubButtonFirstField.sendKeys(String.valueOf(Amt));
     }
 
     @FindBy(xpath = "//input[3]")
@@ -114,10 +120,15 @@ public class NewRecipePage {
      AmtSubButtonSecondField.click();
     }
 
+    @FindBy(xpath = "//div[4]/div[3]/input[@value='0']")
+    private WebElement inputValidDataAmtSubButtonSecondFieldClear;
+    public void inputValidDataAmtSubButtonSecondFieldClear() {
+            inputValidDataAmtSubButtonSecondFieldClear.clear();
+    }
      @FindBy(xpath = "//div[4]/div[3]/input[@value='0']")
      private WebElement inputValidDataAmtSubButtonSecondField;
      public void inputValidDataAmtSubButtonSecondField(int AmtSecond) {
-        inputValidDataAmtSubButtonSecondField.sendKeys(String.valueOf(AmtSecond));
+         inputValidDataAmtSubButtonSecondField.sendKeys(String.valueOf(AmtSecond));
     }
 
     @FindBy(xpath = "//div[4]/div[3]/input[3]")
@@ -154,10 +165,16 @@ public class NewRecipePage {
      AmtSubButtonThirdField.click();
     }
 
+    @FindBy(xpath = "//form[@class='w-full flex flex-col my-2 gap-2 px-4']//div[4]/input[@value='0']")
+    private WebElement inputValidDataAmtSubButtonThirdFieldClear;
+    public void inputValidDataAmtSubButtonThirdFieldClear() {
+            inputValidDataAmtSubButtonThirdFieldClear.clear();
+    }
+
      @FindBy(xpath = "//form[@class='w-full flex flex-col my-2 gap-2 px-4']//div[4]/input[@value='0']")
      private WebElement inputValidDataAmtSubButtonThirdField;
      public void inputValidDataAmtSubButtonThirdField(int AmtThird) {
-        inputValidDataAmtSubButtonThirdField.sendKeys(String.valueOf(AmtThird));
+         inputValidDataAmtSubButtonThirdField.sendKeys(String.valueOf(AmtThird));
     }
 
     @FindBy(xpath = "//form[@class='w-full flex flex-col my-2 gap-2 px-4']//div[4]/input[3]")
@@ -231,14 +248,16 @@ public class NewRecipePage {
     @FindBy(xpath = "//input[@id='price']")
     private WebElement inputValidDataSellIngredientsField;
     public void inputValidDataSellIngredientsField(String SellIngredients) {
+        inputValidDataSellIngredientsField.clear();
         inputValidDataSellIngredientsField.sendKeys(SellIngredients);
     }
-
 
     @FindBy(xpath = "//button[@class='btn btn-primary w-1/2 self-end mt-2']")
     private WebElement SubmitRecipe;
     public void SubmitRecipe() {
         SubmitRecipe.click();
     }
+
+
 
 }

@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.example.pageObject.ViskiPage.CartPage;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import step_definitions.Hooks;
 
@@ -13,6 +14,23 @@ public class CartStepDef {
     public CartStepDef(){
         super();
         webDriver = Hooks.webDriver;
+    }
+
+    @When("^user click add item post in timeline$")
+    public void userClickAddItemPostInTimeline() throws InterruptedException {
+        CartPage cartPage = new CartPage(webDriver);
+        JavascriptExecutor js = (JavascriptExecutor) webDriver;
+        js.executeScript("window.scrollBy(0,2000)", "");
+        Thread.sleep(3000);
+        cartPage.AddItemPostInTimeline();
+        Thread.sleep(3000);
+    }
+
+    @And("^user click add item post in timeline Second$")
+    public void userClickAddItemPostInTimelineSecond() throws InterruptedException {
+        CartPage cartPage = new CartPage(webDriver);
+        cartPage.AddItemPostInTimelineSecond();
+        Thread.sleep(3000);
     }
     @When("^User Click Button Cart$")
     public void userClickButtonCart() throws InterruptedException {

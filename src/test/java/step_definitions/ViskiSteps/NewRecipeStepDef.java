@@ -5,7 +5,9 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.example.pageObject.ViskiPage.NewRecipePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import step_definitions.Hooks;
 
 public class NewRecipeStepDef {
@@ -14,6 +16,7 @@ public class NewRecipeStepDef {
         super();
         webDriver = Hooks.webDriver;
     }
+    public static final String DIR = System.getProperty("user.dir");
 
     @When("^User Click Button Add new Item$")
     public void userClickButtonAddNewItem() throws InterruptedException {
@@ -319,6 +322,14 @@ public class NewRecipeStepDef {
     public void inputAnySellIngredientsField(String SellIngredients) throws InterruptedException {
         NewRecipePage newRecipePage = new NewRecipePage(webDriver);
         newRecipePage.inputValidDataSellIngredientsField(SellIngredients);
+        Thread.sleep(3000);
+    }
+
+    @And("^Click on Choose Files Photo$")
+    public void clickOnChooseFilesPhoto() throws InterruptedException {
+        WebElement X = webDriver.findElement(By.xpath("//input[@id='imageInput']"));
+        String V = "/Users/fizkiarditiakusuma/IdeaProjects/ALTA-Cookit-QE-UI/src/ImageNewRecipe/bolukukus.jpeg";
+        X.sendKeys(V);
         Thread.sleep(3000);
     }
 }

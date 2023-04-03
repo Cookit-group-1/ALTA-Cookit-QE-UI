@@ -1,3 +1,4 @@
+@Test
 Feature: menu Recook
   Scenario: "Recook Functionality - Post"
     Given User open website cookit

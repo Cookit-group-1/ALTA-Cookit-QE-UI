@@ -1,4 +1,5 @@
 Feature: menu new Recipe
+  @photo
   Scenario: "New Recipe Functionality - Submit Recipe"
     Given User open website cookit
     When Click sign in button
@@ -12,9 +13,7 @@ Feature: menu new Recipe
     Then Input Valid Data Recipe Title Field "Kue Bolu Kukus"
     And Click on Description Field
     Then Input Valid Data Description Field "Kue Favorit di pasar"
-#    And Click on Photo Field
-#    And Choose one Photo
-#    And Click Open
+    And Click on Choose Files Photo
     And Click on Ingredients sub button First Field
     Then Input Valid Data Ingredients sub button First Field "Tepung"
     And Click on Amt sub button First Field
@@ -41,7 +40,6 @@ Feature: menu new Recipe
     And Click on Directions add button
     And Click on Directions Second Field
     Then Input Valid Data Directions Second Field "Combine all dry ingredients into a large bowl..."
-    And Click on Directions add button
     And Click on Directions Third Field
     Then Input Valid Data Directions Third Field "Pour into greased trays and bake for 15-20 minutes..."
     And Click on Sell Ingredients Field
@@ -176,7 +174,7 @@ Feature: menu new Recipe
     And User already login
     When User Click Button Add new Item
     Then Click on New Recipe
-#    And Click on Photo Field
+    And Click on Choose Files Photo
 
   Scenario: "New Recipe Functionality  - Ingredients add button"
     Given User open website cookit
