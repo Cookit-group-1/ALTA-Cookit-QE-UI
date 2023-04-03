@@ -5,7 +5,9 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.example.pageObject.ViskiPage.RecookPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import step_definitions.Hooks;
 
 public class RecookStepDef {
@@ -42,19 +44,19 @@ public class RecookStepDef {
         Thread.sleep(3000);
     }
 
-    @And("^Click on Add image button$")
-    public void clickOnAddImageButton() {
-    }
-
-    @Then("^Click on Post Button$")
-    public void clickOnPostButton() {
-    }
-
 
     @Then("^Input any Add your comment Field \"([^\"]*)\"$")
     public void inputAnyAddYourCommentField(String AddYourCommentField) throws InterruptedException {
         RecookPage recookPage = new RecookPage(webDriver);
         recookPage.inputAnyAddYourCommentField(AddYourCommentField);
+        Thread.sleep(3000);
+    }
+
+    @And("^Click on Choose Files Photo Recook$")
+    public void clickOnChooseFilesPhotoRecook() throws InterruptedException {
+        WebElement X = webDriver.findElement(By.xpath("//input[@id='imageInput']"));
+        String V = "/Users/fizkiarditiakusuma/IdeaProjects/ALTA-Cookit-QE-UI/src/ImageRecook/bolukukusbaru.webp";
+        X.sendKeys(V);
         Thread.sleep(3000);
     }
 }

@@ -11,8 +11,7 @@ Feature: menu Recook
     Then Click on reply button in post account user
     And Click Add your comment Field
     Then Input Valid data add your comment Field " Add your comment "
-#    And Click on Add image button
-#    Then Click on Post Button
+    And Click on Choose Files Photo Recook
 
   Scenario Outline: "Recook Validation - add your comment"
     Given User open website cookit
