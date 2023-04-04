@@ -328,7 +328,7 @@ public class NewRecipeStepDef {
     @And("^Click on Choose Files Photo$")
     public void clickOnChooseFilesPhoto() throws InterruptedException {
         WebElement X = webDriver.findElement(By.xpath("//input[@id='imageInput']"));
-        String V = "/Users/fizkiarditiakusuma/IdeaProjects/ALTA-Cookit-QE-UI/src/ImageNewRecipe/bolukukus.jpeg";
+        String V = "/Users/fizkiarditiakusuma/IdeaProjects/ALTA-Cookit-QE-UI/src/test/resources/ImageNewRecipe/bolukukus.jpeg";
         X.sendKeys(V);
         Thread.sleep(3000);
     }

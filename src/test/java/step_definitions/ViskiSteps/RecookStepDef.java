@@ -23,6 +23,13 @@ public class RecookStepDef {
         Thread.sleep(3000);
     }
 
+    @And("^Click Three Point in post account user$")
+    public void clickThreePointInPostAccountUser() throws InterruptedException {
+        RecookPage recookPage = new RecookPage(webDriver);
+        recookPage.ThreePointInPostAccountUser();
+        Thread.sleep(3000);
+    }
+
     @Then("^Click on reply button in post account user$")
     public void clickOnReplyButtonInPostAccountUser() throws InterruptedException {
         RecookPage recookPage = new RecookPage(webDriver);
@@ -55,8 +62,9 @@ public class RecookStepDef {
     @And("^Click on Choose Files Photo Recook$")
     public void clickOnChooseFilesPhotoRecook() throws InterruptedException {
         WebElement X = webDriver.findElement(By.xpath("//input[@id='imageInput']"));
-        String V = "/Users/fizkiarditiakusuma/IdeaProjects/ALTA-Cookit-QE-UI/src/ImageRecook/bolukukusbaru.webp";
+        String V = "/Users/fizkiarditiakusuma/IdeaProjects/ALTA-Cookit-QE-UI/src/test/resources/ImageRecook/bolukukusbaru.webp";
         X.sendKeys(V);
         Thread.sleep(3000);
     }
+
 }
