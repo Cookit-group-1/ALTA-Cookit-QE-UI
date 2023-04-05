@@ -1,4 +1,5 @@
 Feature: menu new Recipe
+  @newrecipe
   Scenario: "New Recipe Functionality - Submit Recipe"
     Given User open website cookit
     When Click sign in button
@@ -43,6 +44,7 @@ Feature: menu new Recipe
     Then Input Valid Data Directions Third Field "Pour into greased trays and bake for 15-20 minutes..."
     And Click on Submit Recipe
 
+    @newrecipe
   Scenario: "New Recipe Functionality - Submit Recipe invalid input data recipe title field"
     Given User open website cookit
     When Click sign in button
