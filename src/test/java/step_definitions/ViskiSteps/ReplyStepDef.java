@@ -60,7 +60,7 @@ public class ReplyStepDef {
 
     @And("^Click on Choose Files Photo Reply$")
     public void clickOnChooseFilesPhotoReply() throws InterruptedException {
-        WebElement X = webDriver.findElement(By.xpath("//label[@class='btn btn-ghost w-full sm:w-20 w-10 sm:btn-sm flex gap-2']"));
+        WebElement X = webDriver.findElement(By.xpath("//input[1]"));
         String DIR = System.getProperty("User.DIR");
         String V = "/Users/fizkiarditiakusuma/IdeaProjects/ALTA-Cookit-QE-UI/src/test/resources/ImageRecook/bolukukusnew.jpeg";
         X.sendKeys(V);

@@ -18,7 +18,7 @@ public class ReplyPage {
         TabRecipe.click();
     }
 
-    @FindBy(css = "//body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[4]/div[3]/ul[1]")
+    @FindBy(xpath= "//body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[4]/div[3]/label[1]")
     private WebElement ThreePointInPostAccountUser;
     public void ThreePointInPostAccountUser() {
         ThreePointInPostAccountUser.click();
