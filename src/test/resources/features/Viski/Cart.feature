@@ -1,4 +1,4 @@
-@Test
+@Cart
 Feature: menu Cart
   Scenario: "Cart Functionality - Add Item to chart"
     Given User open website cookit
@@ -40,4 +40,5 @@ Feature: menu Cart
     And CLick login button
     And User already login
     When User Click Button Cart
+    And Click Checklist product in cart
     Then Click on Check out

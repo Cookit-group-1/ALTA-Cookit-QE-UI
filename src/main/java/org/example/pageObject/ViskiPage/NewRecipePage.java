@@ -238,20 +238,6 @@ public class NewRecipePage {
         inputValidDataDirectionsThirdField.sendKeys(DirectionsThird);
     }
 
-
-    @FindBy(xpath = "//input[@class='checkbox checkbox-primary rounded-full checkbox-sm']")
-    private WebElement SellIngredientsField;
-    public void SellIngredientsField() {
-        SellIngredientsField.click();
-    }
-
-    @FindBy(xpath = "//input[@id='price']")
-    private WebElement inputValidDataSellIngredientsField;
-    public void inputValidDataSellIngredientsField(String SellIngredients) {
-        inputValidDataSellIngredientsField.clear();
-        inputValidDataSellIngredientsField.sendKeys(SellIngredients);
-    }
-
     @FindBy(xpath = "//button[@class='btn btn-primary w-1/2 self-end mt-2']")
     private WebElement SubmitRecipe;
     public void SubmitRecipe() {

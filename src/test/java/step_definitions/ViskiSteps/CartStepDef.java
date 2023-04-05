@@ -19,9 +19,6 @@ public class CartStepDef {
     @When("^user click add item post in timeline$")
     public void userClickAddItemPostInTimeline() throws InterruptedException {
         CartPage cartPage = new CartPage(webDriver);
-        JavascriptExecutor js = (JavascriptExecutor) webDriver;
-        js.executeScript("window.scrollBy(0,2000)", "");
-        Thread.sleep(3000);
         cartPage.AddItemPostInTimeline();
         Thread.sleep(3000);
     }
@@ -29,6 +26,9 @@ public class CartStepDef {
     @And("^user click add item post in timeline Second$")
     public void userClickAddItemPostInTimelineSecond() throws InterruptedException {
         CartPage cartPage = new CartPage(webDriver);
+        JavascriptExecutor js = (JavascriptExecutor) webDriver;
+        js.executeScript("window.scrollBy(0,500)", "");
+        Thread.sleep(3000);
         cartPage.AddItemPostInTimelineSecond();
         Thread.sleep(3000);
     }
@@ -61,11 +61,18 @@ public class CartStepDef {
         Thread.sleep(3000);
     }
 
+
+    @And("^Click Checklist product in cart$")
+    public void clickChecklistProductInCart() throws InterruptedException {
+        CartPage cartPage = new CartPage(webDriver);
+        cartPage.ChecklistProductInCart();
+        Thread.sleep(5000);
+    }
+
     @Then("^Click on Check out$")
     public void clickOnCheckOut() throws InterruptedException {
         CartPage cartPage = new CartPage(webDriver);
         cartPage.CheckOut();
         Thread.sleep(3000);
     }
-
 }
