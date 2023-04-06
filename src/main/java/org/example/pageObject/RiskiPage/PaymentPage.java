@@ -10,6 +10,4 @@ public class PaymentPage {
         PageFactory.initElements(webDriver, this);
         this.webDriver = webDriver;
     }
-
-    @FindBy()
 }
