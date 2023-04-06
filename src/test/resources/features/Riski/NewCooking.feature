@@ -34,8 +34,8 @@
       And User already login
       When User click add new item button
       And Click new cooking
-      And Input any description "Hellow word"
-      
+      And Input any description "Hellow word!"
+
 
     @Test9
     Scenario Outline: Create new cooking recipe
