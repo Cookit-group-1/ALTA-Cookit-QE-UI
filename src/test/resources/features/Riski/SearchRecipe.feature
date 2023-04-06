@@ -57,5 +57,3 @@
         And User can input alphabet "Noodle"
         And User click search recipe
         Then System show any recipe "Noodle"
-
-
