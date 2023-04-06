@@ -14,9 +14,10 @@ public class DeliverySteps {
         this.webDriver = Hooks.webDriver;
     }
     @When("^User click add to chart button$")
-    public void userClickAddToChartButton() {
+    public void userClickAddToChartButton() throws InterruptedException {
         PaymentPage paymentPage = new PaymentPage(webDriver);
-        paymentPage.setAddToCheckOut();
+        paymentPage.setAddToCartButton();
+        Thread.sleep(2000);
     }
 
     @And("^Click add to checklist button$")

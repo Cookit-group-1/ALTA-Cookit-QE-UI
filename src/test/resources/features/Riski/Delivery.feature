@@ -1,5 +1,6 @@
 @Test
   Feature: gofood delivery
+    @Test11
     Scenario: Verify gofood delivery is enable
       Given User open website cookit
       When Click sign in button
