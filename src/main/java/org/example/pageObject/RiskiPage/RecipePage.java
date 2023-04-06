@@ -1,5 +1,6 @@
 package org.example.pageObject.RiskiPage;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,10 +40,10 @@ public class RecipePage {
     private WebElement doSearch;
 
     public void setDoSearch(){
-        doSearch.click();
+        searchPage.sendKeys(Keys.RETURN);
     }
 
-    @FindBy(xpath = "//div[@class='relative flex flex-col w-full sm:w-2/3 lg:w-1/2 max-w-xl items-center justify-center']/div[3]//p[@class='font-semibold text-primary hover:text-accent hover:cursor-pointer']")
+    @FindBy(xpath = "//div[@class='relative min-h-screen flex flex-col w-full sm:w-2/3 lg:w-1/2 max-w-xl items-center justify-start']/div[2]//p[@class='font-semibold text-primary hover:text-accent hover:cursor-pointer']")
     private WebElement verifySearch;
 
     public String setVerifySearch(){
