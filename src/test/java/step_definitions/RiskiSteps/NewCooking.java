@@ -3,6 +3,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.example.pageObject.RiskiPage.NewCookingPage;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,5 +47,11 @@ public class NewCooking {
     public void clickSubmit() {
         NewCookingPage newCookingPage = new NewCookingPage(webDriver);
         newCookingPage.setSubmit();
+    }
+
+    @Then("^User already on new cooking page$")
+    public void userAlreadyOnNewCookingPage() {
+        NewCookingPage newCookingPage = new NewCookingPage(webDriver);
+        Assert.assertTrue(newCookingPage.verifyNewCookingPage());
     }
 }

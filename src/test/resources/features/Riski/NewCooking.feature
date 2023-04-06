@@ -8,6 +8,9 @@
       And Input password "Percobaqsafsadan13"
       And CLick login button
       And User already login
+      And User click add new item button
+      Then Click new cooking
+
 
     @Test7
     Scenario: Verify function of new cooking button
@@ -17,6 +20,9 @@
       And Input password "Percobaqsafsadan13"
       And CLick login button
       And User already login
+      And User click add new item button
+      And Click new cooking
+      Then User already on new cooking page
 
     @Test8
     Scenario: input sentence on new cooking field
@@ -26,7 +32,10 @@
       And Input password "Percobaqsafsadan13"
       And CLick login button
       And User already login
-
+      When User click add new item button
+      And Click new cooking
+      And Input any description "Hellow word"
+      
 
     @Test9
     Scenario Outline: Create new cooking recipe
