@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PaymentPage {
+public class DeliveryPage {
     public static WebDriver webDriver;
-    public PaymentPage(WebDriver webDriver){
+    public DeliveryPage(WebDriver webDriver){
         PageFactory.initElements(webDriver, this);
         this.webDriver = webDriver;
     }
@@ -35,4 +35,23 @@ public class PaymentPage {
     public void setGoFoodDelivery(){
         goFoodDelivery.click();
     }
+
+    @FindBy(xpath = "//img[@src='/assets/grabfood-3405c73a.png']")
+    private WebElement grabFoodDelivery;
+    public void setGrabFoodDelivery(){
+        grabFoodDelivery.click();
+    }
+
+    @FindBy(xpath = "//img[@src='/assets/shopeefood-d2f36eed.png']")
+    private WebElement shopeeFoodDelivery;
+    public void setShopeeFoodDelivery(){
+        shopeeFoodDelivery.click();
+    }
+
+    @FindBy(xpath = "//p[4]")
+    private WebElement verifyPrice;
+    public String setVerifyPrice(){
+        return verifyPrice.getText();
+    }
+
 }
