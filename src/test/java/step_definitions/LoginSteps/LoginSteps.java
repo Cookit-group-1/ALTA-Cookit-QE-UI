@@ -15,9 +15,10 @@ public class LoginSteps {
     }
 
     @Given("^User open website cookit$")
-    public void userOpenWebsiteCookit() {
+    public void userOpenWebsiteCookit() throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         Assert.assertTrue(loginPage.verifyLandingPage());
+        Thread.sleep(2000);
     }
 
     @When("^Click sign in button$")
@@ -30,21 +31,21 @@ public class LoginSteps {
     public void inputUsername(String username) throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.setUsername(username);
-        Thread.sleep(1500);
+        Thread.sleep(3000);
     }
 
     @And("^Input password \"(.*)\"$")
     public void inputPassword(String password) throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.setPassword(password);
-        Thread.sleep(1500);
+        Thread.sleep(2000);
     }
 
     @And("^CLick login button$")
     public void clickLoginButton() throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.setLoginButton();
-        Thread.sleep(4000);
+        Thread.sleep(3000);
     }
 
     @And("^User already login$")
