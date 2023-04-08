@@ -14,16 +14,16 @@ B. Link Test Case Manual
 - Test Case Web = https://docs.google.com/spreadsheets/d/1pYSAEuCC_kpngUCbl5Dw918PbcrzWdwvT_Lm8t2qwp0/edit#gid=1363682893
 
 C. Gambar Report Test Overall.
-API Testing
-45    Test Scenario
-102  Test Case
+- API Testing
+45 Test Scenario
+102 Test Case
 
 79 Test Case Passed
 23 Test Case Failed
 
-Web Testing
-42    Test Scenario
-128  Test Case
+- Web Testing
+42 Test Scenario
+128 Test Case
 
 98 Test Case Passed
 30 Test Case Failed
