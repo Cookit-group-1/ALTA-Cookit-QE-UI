@@ -4,8 +4,8 @@
     Scenario: Verify new cooking button is enable
       Given User open website cookit
       When Click sign in button
-      And Input username "RiskiFdfsadfaserdian49"
-      And Input password "Percobaqsafsadan13"
+      And Input username "Testing123"
+      And Input password "Testing123"
       And CLick login button
       And User already login
       And User click add new item button
@@ -16,8 +16,8 @@
     Scenario: Verify function of new cooking button
       Given User open website cookit
       When Click sign in button
-      And Input username "RiskiFdfsadfaserdian49"
-      And Input password "Percobaqsafsadan13"
+      And Input username "Testing123"
+      And Input password "Testing123"
       And CLick login button
       And User already login
       And User click add new item button
@@ -28,8 +28,8 @@
     Scenario: input sentence on new cooking field
       Given User open website cookit
       When Click sign in button
-      And Input username "RiskiFdfsadfaserdian49"
-      And Input password "Percobaqsafsadan13"
+      And Input username "Testing123"
+      And Input password "Testing123"
       And CLick login button
       And User already login
       When User click add new item button
@@ -41,8 +41,8 @@
     Scenario Outline: Create new cooking recipe
       Given User open website cookit
       When Click sign in button
-      And Input username "RiskiFdfsadfaserdian49"
-      And Input password "Percobaqsafsadan13"
+      And Input username "Testing123"
+      And Input password "Testing123"
       And CLick login button
       And User already login
       When User click add new item button
@@ -60,8 +60,8 @@
     Scenario: Create new cooking recipe with empty data
       Given User open website cookit
       When Click sign in button
-      And Input username "RiskiFdfsadfaserdian49"
-      And Input password "Percobaqsafsadan13"
+      And Input username "Testing123"
+      And Input password "Testing123"
       And CLick login button
       And User already login
       When User click add new item button
