@@ -26,7 +26,7 @@ C. Gambar Report Test Overall.
 128 Test Case
 
 98 Test Case Passed
-30 Test Case Failed.
+30 Test Case Failed
 
 D. Tools & Technology Stack.
 - Java
