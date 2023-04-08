@@ -1,32 +1,32 @@
-@Test
+@Testx
   Feature: Search recipe button validation
-      @Test
+      @Test1
     Scenario: Search recipe with valid data
-      Given User open website cookit
-      When Click sign in button
-      And Input username "RiskiFdfsadfaserdian49"
-      And Input password "Percobaqsafsadan13"
-      And CLick login button
-      And User already login
+        Given User open website cookit
+        When Click sign in button
+        And Input username "Testing123"
+        And Input password "Testing123"
+        And CLick login button
+        And User already login
       Then User click search button
 
       @Test2
     Scenario: Search recipe button functionality
-      Given User open website cookit
-      When Click sign in button
-      And Input username "RiskiFdfsadfaserdian49"
-      And Input password "Percobaqsafsadan13"
-      And CLick login button
-      And User already login
-      When User click search button
-      Then System show search page
+        Given User open website cookit
+        When Click sign in button
+        And Input username "Testing123"
+        And Input password "Testing123"
+        And CLick login button
+        And User already login
+        When User click search button
+        Then System show search page
 
       @Test3
     Scenario: Search field validation
         Given User open website cookit
         When Click sign in button
-        And Input username "RiskiFdfsadfaserdian49"
-        And Input password "Percobaqsafsadan13"
+        And Input username "Testing123"
+        And Input password "Testing123"
         And CLick login button
         And User already login
         When User click search button
@@ -36,8 +36,8 @@
     Scenario: Input alphabet on search field
         Given User open website cookit
         When Click sign in button
-        And Input username "RiskiFdfsadfaserdian49"
-        And Input password "Percobaqsafsadan13"
+        And Input username "Testing123"
+        And Input password "Testing123"
         And CLick login button
         And User already login
         When User click search button
@@ -48,8 +48,8 @@
     Scenario Outline: Search recipe with alphabet
         Given User open website cookit
         When Click sign in button
-        And Input username "RiskiFdfsadfaserdian49"
-        And Input password "Percobaqsafsadan13"
+        And Input username "Testing123"
+        And Input password "Testing123"
         And CLick login button
         And User already login
         When User click search button
