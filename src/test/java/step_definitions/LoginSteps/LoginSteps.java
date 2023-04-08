@@ -44,13 +44,13 @@ public class LoginSteps {
     public void clickLoginButton() throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.setLoginButton();
-        Thread.sleep(1800);
+        Thread.sleep(4000);
     }
 
     @And("^User already login$")
     public void userAlreadyLogin() throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         Assert.assertTrue(loginPage.verifyDashboard());
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 }
