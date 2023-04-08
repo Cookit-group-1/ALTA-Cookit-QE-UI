@@ -38,7 +38,7 @@ public class PaymentMethodPage {
         BRI.click();
     }
 
-    @FindBy(xpath = "//button[@class='btn bg-primary hover:bg-secondary text-white']")
+    @FindBy(xpath = "//label[.='Place Order']")
     private WebElement placeOrderButton;
 
     public void setPlaceOrderButton(){
