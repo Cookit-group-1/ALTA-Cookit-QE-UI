@@ -4,7 +4,9 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import org.example.pageObject.AbdiPage.ProfilePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import step_definitions.Hooks;
 
 public class ProfileStep {
@@ -74,12 +76,24 @@ public class ProfileStep {
         profilePage.setIconEyeConfirmNewPassword();
         Thread.sleep(3000);
     }
+    @And("^User upload photo profile$")
+    public void userUploadPhotoProfile() throws InterruptedException {
+        WebElement X = webDriver.findElement(By.xpath("//input[@id='pict']"));
+        String A = "/Users/macbookArshaka/Documents/CAPSTONE COOKIT/ALTA-Cookit-QE-UI/src/test/resources/images/abdi.jpeg";
+        X.sendKeys(A);
+        Thread.sleep(3000);
+    }
+    @And("^User click request to be verified$")
+    public void userClickRequestToBeVerified() throws InterruptedException {
+        ProfilePage profilePage = new ProfilePage(webDriver);
+        profilePage.setButtonVerified();
+        Thread.sleep(3000);
+    }
 
     @And("^User click button save$")
     public void userClickButtonSave() throws InterruptedException {
         ProfilePage profilePage = new ProfilePage(webDriver);
         profilePage.setButtonSave();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
-
 }

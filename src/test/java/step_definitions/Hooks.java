@@ -17,7 +17,7 @@ public class Hooks {
         WebDriverManager.chromedriver().setup();
         a.addArguments("--remote-allow-origins=*");
         webDriver= new ChromeDriver(a);
-        String URL = "https://cookit-alta.netlify.app/";
+        String URL = "https://cookit-alta2.netlify.app/";
         webDriver.get(URL);
         webDriver.manage().window().maximize();
     }
