@@ -1,4 +1,4 @@
-@Testx
+@Test
   Feature: Search recipe button validation
       @Test1
     Scenario: Search recipe with valid data

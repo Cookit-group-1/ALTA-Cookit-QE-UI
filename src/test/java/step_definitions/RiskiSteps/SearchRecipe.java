@@ -27,9 +27,10 @@ public class SearchRecipe {
     }
 
     @Then("^User click search page$")
-    public void userClickSearchPage() {
+    public void userClickSearchPage() throws InterruptedException{
         RecipePage recipePage = new RecipePage(webDriver);
         recipePage.clickSearhRecipe();
+        Thread.sleep(3000);
     }
 
     @Then("^User can input alphabet \"(.*)\"$")
