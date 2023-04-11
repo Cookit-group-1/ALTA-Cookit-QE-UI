@@ -1,4 +1,5 @@
 package step_definitions.LoginSteps;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -37,7 +38,7 @@ public class LoginSteps {
     public void inputPassword(String password) throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.setPassword(password);
-        Thread.sleep(1500);
+
     }
 
     @And("^CLick login button$")

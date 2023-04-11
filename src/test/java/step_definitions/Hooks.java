@@ -11,20 +11,20 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Hooks {
     public static WebDriver webDriver;
 
-    @Before
-    public void openBrowser(){
-        ChromeOptions a = new ChromeOptions();
-        WebDriverManager.chromedriver().setup();
-        a.addArguments("--remote-allow-origins=*");
-        webDriver= new ChromeDriver(a);
-        String URL = "https://alta-cookit.vercel.app/";
-        webDriver.get(URL);
+    @Before public void openBrowser() {
+        System.setProperty("webdriver.chrome.driver",
+                System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
+
+        webDriver = new ChromeDriver();
+        String appUrl = "https://cookit-alta2.netlify.app";
+        webDriver.get(appUrl);
         webDriver.manage().window().maximize();
     }
 
     @After
     public void closeBrowser(){
         webDriver.quit();
+
     }
 
 }
